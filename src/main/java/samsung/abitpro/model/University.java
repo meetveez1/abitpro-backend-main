@@ -22,6 +22,14 @@ public class University {
     private boolean isMilitary;
     @Column(nullable = false)
     private int militaryFromCourse;
+    @Column(nullable = false)
+    private int budgBall;
+    @Column(nullable = false)
+    private int budgPlace;
+    @Column(nullable = false)
+    private int paidBall;
+    @Column(nullable = false)
+    private int paidPlace;
 
     public boolean isMilitary() {
         return isMilitary;
@@ -37,6 +45,38 @@ public class University {
 
     public void setMilitaryFromCourse(int militaryFromCourse) {
         this.militaryFromCourse = militaryFromCourse;
+    }
+
+    public int getBudgBall() {
+        return budgBall;
+    }
+
+    public void setBudgBall(int budgBall) {
+        this.budgBall = budgBall;
+    }
+
+    public int getBudgPlace() {
+        return budgPlace;
+    }
+
+    public void setBudgPlace(int budgPlace) {
+        this.budgPlace = budgPlace;
+    }
+
+    public int getPaidBall() {
+        return paidBall;
+    }
+
+    public void setPaidBall(int paidBall) {
+        this.paidBall = paidBall;
+    }
+
+    public int getPaidPlace() {
+        return paidPlace;
+    }
+
+    public void setPaidPlace(int paidPlace) {
+        this.paidPlace = paidPlace;
     }
 
     public long getId() {
@@ -90,12 +130,18 @@ public class University {
         this.rating = rating;
     }
 
-    public University(long id, String name, String city, String description, String officialWebsite, int rating) {
+    public University(long id, String name, String city, String description, String officialWebsite, int rating, boolean isMilitary, int militaryFromCourse, int budgBall, int budgPlace, int paidBall, int paidPlace) {
         this.id = id;
         this.name = name;
         this.city = city;
         this.description = description;
         this.officialWebsite = officialWebsite;
         this.rating = rating;
+        this.isMilitary = isMilitary;
+        this.militaryFromCourse = militaryFromCourse;
+        this.budgBall = budgBall;
+        this.budgPlace = budgPlace;
+        this.paidBall = paidBall;
+        this.paidPlace = paidPlace;
     }
 }

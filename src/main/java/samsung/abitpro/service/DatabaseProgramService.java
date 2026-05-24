@@ -23,6 +23,6 @@ public class DatabaseProgramService implements ProgramService {
 
     @Override
     public List<Program> searchProgramsByName(String name) {
-        return List.of();
+        return programRepository.findByNameContainingIgnoreCase(name);
     }
 }
