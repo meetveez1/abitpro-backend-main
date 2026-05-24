@@ -11,4 +11,5 @@ import java.util.List;
 @Repository
 public interface ProgramRepository extends JpaRepository<Program, Long> {
     List<Program> findByNameContainingIgnoreCase(String Name);
+    List<Program> findByUniversityId(long universityId);
 }

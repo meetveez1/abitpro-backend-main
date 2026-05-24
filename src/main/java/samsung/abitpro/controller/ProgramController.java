@@ -29,4 +29,9 @@ public class ProgramController {
     public List<Program>searchProgramByName(@RequestParam String name){
         return programService.searchProgramsByName(name);
     }
+    
+    @GetMapping("/university/{universityId}")
+    public List<Program> getProgramsByUniversityId(@PathVariable long universityId) {
+        return programService.getProgramsByUniversityId(universityId);
+    }
 }

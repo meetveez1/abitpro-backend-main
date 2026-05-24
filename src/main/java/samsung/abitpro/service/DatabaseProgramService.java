@@ -25,4 +25,9 @@ public class DatabaseProgramService implements ProgramService {
     public List<Program> searchProgramsByName(String name) {
         return programRepository.findByNameContainingIgnoreCase(name);
     }
+
+    @Override
+    public List<Program> getProgramsByUniversityId(long universityId) {
+        return programRepository.findByUniversityId(universityId);
+    }
 }

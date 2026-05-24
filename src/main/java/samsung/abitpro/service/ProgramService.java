@@ -9,4 +9,5 @@ public interface ProgramService {
     List<Program>getAllProgram();
     Program getProgramById(long id);
     List<Program>searchProgramsByName(String name);
+    List<Program> getProgramsByUniversityId(long universityId);
 }
