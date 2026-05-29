@@ -29,6 +29,6 @@ public class DatabaseUniversityService implements UniversityService {
 
     @Override
     public List<University> searchUniversitiesByName(String name) {
-        return universityRepository.findByNameContainingIgnoreCase(name);
+        return universityRepository.findByNameContainingIgnoreCaseOrPopularProgramsContainingIgnoreCase(name, name);
     }
 }
